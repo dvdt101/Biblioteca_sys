@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Biblioteca sys - Consultar Acervo</title>
+	<meta charset="utf-8">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body class="jumbotron">
+	<script type="text/javascript">
+		
+       function definirPlaceholder() {
+       	var radioValue = $("input[name='parametroDeBusca']:checked").val();
+       	if(radioValue =="titulo")
+       	{
+        $("#dadoParaBusca").attr("placeholder","Titulo do Livro");
+    	}
+    	else if (radioValue =="editora")
+    	{
+    		$("#dadoParaBusca").attr("placeholder","Editora");
+    	}
+    	else if (radioValue =="autor")
+    	{
+    		$("#dadoParaBusca").attr("placeholder","Autor");
+    	}
+      
+       }
+        
+	</script>
+	<div>
+		<h1 class="display-4" style="text-align: center;">Biblioteca sys</h1>
+	</div>
+	<div>
+		<h2 style="text-align: center;">Consultar Acervo</h2>
+	</div>
+	<div style="text-align: center;">
+		<form method="POST" action="listaLivros.php">	
+			<br><br>
+		<div class="custom-control custom-radio custom-control-inline">
+			<input type="radio" name="parametroDeBusca" id="titulo" value="titulo" required="on" onclick="definirPlaceholder();" class="custom-control-input">
+		<label  for="titulo" class="custom-control-label">Titulo do Livro</label>
+		</div>
+		<div class="custom-control custom-radio custom-control-inline">
+			<input type="radio" name="parametroDeBusca" id="editora" value="editora" required="on" onclick="definirPlaceholder();"  class="custom-control-input">
+		<label for="editora" class="custom-control-label">Editora</label>
+		</div>
+		<div class="custom-control custom-radio custom-control-inline">
+			<input type="radio" name="parametroDeBusca" id="autor" value="autor" required="on" onclick="definirPlaceholder();"  class="custom-control-input">
+		<label for="autor" class="custom-control-label">Autor</label>
+		</div>
+		<br>
+		<br>
+		<div class="custom-control custom-input custom-control-inline">
+		<input type="text" id="dadoParaBusca" name="dadoParaBusca" required="on" maxlength="50" placeholder="Selecione um Parâmetro de Busca" size="30" class="form-control form-control-lg">&emsp;
+		<button type="submit" class="btn btn-primary"><i class="fas fa-search fa-2x"></i></button>
+		</div>
+		</form>
+		<br>
+		<br>
+		<a href="../index.html"><i class="fas fa-arrow-left fa-3x" ></i></a>
+	</div>
+</body>
+</html>

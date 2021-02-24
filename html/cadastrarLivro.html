@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Biblioteca sys - Cadastrar Livro</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body class="jumbotron">
+	<div >
+		<h1 class="display-4" style="text-align: center;">Biblioteca sys</h1>
+	</div>
+	<div>
+		<h2  style="text-align: center;">Cadastrar Livro</h2>
+	<div class="container col-5">
+		<form method="POST" action="../banco/cadastrarLivro.php">
+		<div class="form-group">
+			
+		<label for="titulo">Titulo:</label>
+		<input type="text" name="titulo" id="titulo" class="form-control" required maxlength="100">
+		
+		<label for="editora">Editora:</label>
+		<input type="text" name="editora" id="editora" class="form-control" required maxlength="100">
+		
+		<label for="autor">Autor:</label>
+		<input type="text" name="autor" id="autor" class="form-control" required maxlength="100">
+		
+		<label for="quantidade">Quantidade:</label>
+		<input type="number" name="quantidade" id="quantidade" class="form-control" required max="999" min="1">
+		</div>
+		<div>
+		<br>
+		<div class="col-15">
+		<button type="submit" class="btn btn-success col-4">Cadastrar</button>
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	</form>
+	<a href='../index.html'><i class="fas fa-arrow-left fa-3x" ></i></a>
+	</div>
+</div>
+</body>
+</html>
