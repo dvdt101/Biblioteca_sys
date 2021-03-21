@@ -13,7 +13,10 @@ $stmt->execute();
 }
 else
 {
-	header('Location:../html/consultarAcervo.html');
+	$stmt = $conexao->prepare("SELECT * FROM acervo");
+
+
+	$stmt->execute();
 }
 ?>
 <!DOCTYPE html>
