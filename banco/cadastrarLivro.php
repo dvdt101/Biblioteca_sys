@@ -14,6 +14,13 @@ $stmt -> bindParam(3,$autor);
 $stmt -> bindParam(4,$quantidade);
 
 $stmt -> execute();
- header('Location:../html/cadastrarLivro.html');
+
+echo '<script type="text/javascript">',
+     'alert(`Livro cadastrado com sucesso!`);
+     window.location.href = "../html/cadastrarLivro.html";',
+     '</script>';
+
+ //header('Location:../html/cadastrarLivro.html');
+ 
 
 ?>
